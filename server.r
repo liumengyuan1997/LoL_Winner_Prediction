@@ -89,7 +89,7 @@ server <- shinyServer(function(input, output, section) {
     # ann.predict <- predict_classes(object = ann.model, x = as.matrix(test[,1:13])) %>%
     # as.vector()
     
-    models <- c(knn.predict,svm.predict)
+    models <- c(knn.predict,svm.predict,svm.predict)
     uniqv <- unique(models)
     vote <- uniqv[which.max(tabulate(match(models, uniqv)))]
     
